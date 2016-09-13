@@ -5,3 +5,12 @@ cat(paste0("start:",format(Sys.time(), "%Y %m %d %H:%M:%S\n")))
 #Extract Command Line Arguments
 args <- commandArgs(trailingOnly=TRUE)
 var <- args[1]
+
+# logging
+library(logging)
+basicConfig()
+logdebug("not shown, basic is INFO")
+logwarn("shown and timestamped")
+loginfo("ry")
+logReset()
+logwarn("not shown, as no handlers are present after a reset")
