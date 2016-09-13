@@ -1,0 +1,7 @@
+#time format
+timestr <- format(Sys.time(), "%Y%m%d%H%M%S")
+cat(paste0("start:",format(Sys.time(), "%Y %m %d %H:%M:%S\n")))
+
+#Extract Command Line Arguments
+args <- commandArgs(trailingOnly=TRUE)
+var <- args[1]
